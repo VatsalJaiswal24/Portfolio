@@ -9,6 +9,7 @@ interface CertificateData {
   id: string
   title: string
   imageUrl: string
+  verifyUrl?: string
 }
 
 export function CertificateViewer({ children }: { children: React.ReactNode }) {
@@ -20,6 +21,25 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
       id: "algorithmic-toolbox",
       title: "Algorithmic Toolbox - UC San Diego",
       imageUrl: "/certificates/algorithmic-toolbox.jpg",
+      verifyUrl: "https://coursera.org/verify/PQLV3PDUTBVG",
+    },
+    {
+      id: "java-oop",
+      title: "Object Oriented Programming in Java - UC San Diego",
+      imageUrl: "/certificates/java-oop.jpg",
+      verifyUrl: "https://coursera.org/verify/93DYJX2EMUN7",
+    },
+    {
+      id: "data-structures",
+      title: "Data Structures - UC San Diego",
+      imageUrl: "/certificates/data-structures.jpg",
+      verifyUrl: "https://coursera.org/verify/JN6EF3U3A2KE",
+    },
+    {
+      id: "python-data-science",
+      title: "Python for Data Science, AI & Development - IBM",
+      imageUrl: "/certificates/python-data-science.jpg",
+      verifyUrl: "https://coursera.org/verify/XX8RV657XLQC",
     },
   ]
 
@@ -52,6 +72,7 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
           onClose={() => setIsModalOpen(false)}
           imageUrl={currentCertificate.imageUrl}
           title={currentCertificate.title}
+          verifyUrl={currentCertificate.verifyUrl}
         />
       )}
     </>
