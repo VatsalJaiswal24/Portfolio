@@ -329,7 +329,7 @@ export default function Home() {
                 description="A website built using HTML, CSS, JavaScript showcases project skills and experience with an interactive and responsive design. It integrates dynamic content and seamless navigation for an engaging user experience."
                 tags={["HTML", "CSS", "JavaScript"]}
                 demoUrl="#"
-                codeUrl="#"
+                codeUrl="https://github.com/VatsalJaiswal24/Portfolio"
                 color="yellow"
               />
             </ScrollReveal>
