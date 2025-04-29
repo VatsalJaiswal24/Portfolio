@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Github, Linkedin, Mail, MapPin, Phone, ChevronDown, ExternalLink } from "lucide-react"
@@ -75,7 +77,7 @@ export default function Home() {
                   <Github size={24} />
                 </a>
                 <a
-                  href="https://linkedin.com/in/vatsal-jaiswal-7172a824b"
+                  href="https://www.linkedin.com/in/vatsaljaiswal/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-yellow-400 transition-colors"
@@ -184,7 +186,7 @@ export default function Home() {
                   <div className="flex items-center gap-3">
                     <Linkedin className="text-purple-400" size={18} />
                     <a
-                      href="https://linkedin.com/in/vatsal-jaiswal-7172a824b"
+                      href="https://www.linkedin.com/in/vatsaljaiswal/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-300 hover:text-yellow-400 transition-colors"
@@ -380,13 +382,17 @@ export default function Home() {
                 </div>
                 <p className="text-gray-300 mb-4">
                   Comprehensive training in algorithm design and analysis, covering essential techniques for solving
-                  computational problems efficiently.
+                  computational problems efficiently. Issued by UC San Diego through Coursera.
                 </p>
                 <div className="flex justify-end">
                   <Button
                     variant="ghost"
                     size="sm"
                     className="text-yellow-400 hover:text-yellow-300 hover:bg-yellow-900/20 opacity-0 group-hover:opacity-100 transition-opacity"
+                    onClick={() => {
+                      // @ts-ignore - This is a client component function
+                      window.openCertificateModal("algorithmic-toolbox")
+                    }}
                   >
                     <ExternalLink size={16} className="mr-2" />
                     View Certificate
