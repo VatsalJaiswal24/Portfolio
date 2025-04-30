@@ -25,10 +25,11 @@ export function CertificateModal({ isOpen, onClose, imageUrl, title, verifyUrl }
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
       <div
         className={`relative bg-gray-900 rounded-lg shadow-2xl overflow-hidden transition-all duration-300 ease-in-out ${
-          isMinimized ? "w-64 h-16" : "w-full max-w-4xl"
+          isMinimized ? "w-64 h-16" : "w-full max-w-4xl max-h-[90vh]"
         }`}
       >
-        <div className="flex items-center justify-between p-4 border-b border-gray-800">
+        {/* Header - Always visible */}
+        <div className="sticky top-0 z-20 flex items-center justify-between p-4 border-b border-gray-800 bg-gray-900">
           <h3 className="text-xl font-semibold text-yellow-400 truncate">{title}</h3>
           <div className="flex items-center space-x-2">
             <Button
@@ -54,16 +55,23 @@ export function CertificateModal({ isOpen, onClose, imageUrl, title, verifyUrl }
 
         {!isMinimized && (
           <>
-            <div className="relative p-2 bg-white">
-              <Image
-                src={imageUrl || "/placeholder.svg"}
-                alt={`${title} Certificate`}
-                width={1000}
-                height={700}
-                className="w-full h-auto"
-              />
+            {/* Scrollable content area */}
+            <div className="overflow-y-auto max-h-[calc(90vh-130px)]">
+              <div className="relative p-2 bg-white">
+                <div className="relative w-full" style={{ height: "auto", maxHeight: "70vh" }}>
+                  <Image
+                    src={imageUrl || "/placeholder.svg"}
+                    alt={`${title} Certificate`}
+                    width={1000}
+                    height={700}
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              </div>
             </div>
-            <div className="p-4 flex justify-between">
+
+            {/* Footer - Always at bottom */}
+            <div className="sticky bottom-0 p-4 flex justify-between bg-gray-900 border-t border-gray-800">
               {verifyUrl && (
                 <Button
                   variant="outline"
