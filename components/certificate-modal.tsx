@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 import Image from "next/image"
-import { X, Minimize2, Maximize2, AlertCircle } from "lucide-react"
+import { X, Minimize2, Maximize2, Award } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface CertificateModalProps {
@@ -21,6 +21,8 @@ export function CertificateModal({ isOpen, onClose, imageUrl, title, verifyUrl }
   const toggleMinimize = () => {
     setIsMinimized(!isMinimized)
   }
+
+  const isPlaceholder = imageUrl.includes("placeholder.svg")
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
@@ -59,17 +61,27 @@ export function CertificateModal({ isOpen, onClose, imageUrl, title, verifyUrl }
             {/* Scrollable content area */}
             <div className="overflow-y-auto max-h-[calc(90vh-130px)]">
               <div className="relative p-2 bg-white">
-                {imageError ? (
-                  <div className="flex flex-col items-center justify-center p-8 text-gray-500">
-                    <AlertCircle size={48} className="mb-4" />
-                    <p className="text-center">
-                      Certificate image could not be loaded. Please try verifying the certificate using the link below.
+                {imageError || isPlaceholder ? (
+                  <div className="flex flex-col items-center justify-center p-8 text-gray-700 bg-gray-100 rounded-lg">
+                    <Award size={64} className="mb-4 text-yellow-500" />
+                    <h3 className="text-2xl font-bold mb-2">{title}</h3>
+                    <p className="text-center mb-4">
+                      This certificate is available for verification using the link below.
                     </p>
+                    {verifyUrl && (
+                      <Button
+                        variant="outline"
+                        className="bg-yellow-500 text-black hover:bg-yellow-600"
+                        onClick={() => window.open(verifyUrl, "_blank")}
+                      >
+                        Verify Certificate
+                      </Button>
+                    )}
                   </div>
                 ) : (
                   <div className="relative w-full" style={{ height: "auto", maxHeight: "70vh" }}>
                     <Image
-                      src={imageUrl || "/placeholder.svg?height=700&width=1000"}
+                      src={imageUrl || "/placeholder.svg"}
                       alt={`${title} Certificate`}
                       width={1000}
                       height={700}
@@ -84,7 +96,7 @@ export function CertificateModal({ isOpen, onClose, imageUrl, title, verifyUrl }
 
             {/* Footer - Always at bottom */}
             <div className="sticky bottom-0 p-4 flex justify-between bg-gray-900 border-t border-gray-800">
-              {verifyUrl && (
+              {verifyUrl && !isPlaceholder && !imageError && (
                 <Button
                   variant="outline"
                   className="text-yellow-400 border-yellow-400 hover:bg-yellow-400/10"
@@ -93,7 +105,11 @@ export function CertificateModal({ isOpen, onClose, imageUrl, title, verifyUrl }
                   Verify Certificate
                 </Button>
               )}
-              <Button variant="outline" onClick={onClose} className="ml-auto">
+              <Button
+                variant="outline"
+                onClick={onClose}
+                className={`${!verifyUrl || isPlaceholder || imageError ? "" : "ml-auto"}`}
+              >
                 Close
               </Button>
             </div>

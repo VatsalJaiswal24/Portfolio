@@ -51,7 +51,7 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "java-arrays",
       title: "Java Programming: Arrays, Lists, and Structured Data",
-      imageUrl: "/placeholder.svg?height=700&width=1000",
+      imageUrl: "/placeholder.svg?height=700&width=1000&text=Java+Programming+Certificate",
       verifyUrl: "https://coursera.org/verify/UK6SB63NUZ7K",
       category: "Core Courses",
       issuer: "Duke University",
@@ -60,7 +60,7 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "python-basics",
       title: "Python Basics",
-      imageUrl: "/placeholder.svg?height=700&width=1000",
+      imageUrl: "/placeholder.svg?height=700&width=1000&text=Python+Basics+Certificate",
       verifyUrl: "https://coursera.org/verify/8KA7M34W363N",
       category: "Core Courses",
       issuer: "University of Michigan",
@@ -80,7 +80,7 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "intro-ai",
       title: "Introduction to Artificial Intelligence (AI)",
-      imageUrl: "/placeholder.svg?height=700&width=1000",
+      imageUrl: "/placeholder.svg?height=700&width=1000&text=Intro+to+AI+Certificate",
       verifyUrl: "https://coursera.org/verify/WRNHR3M8TF56",
       category: "Data Science & AI",
       issuer: "IBM",
@@ -89,7 +89,7 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "sql-data-science",
       title: "Databases and SQL for Data Science with Python",
-      imageUrl: "/placeholder.svg?height=700&width=1000",
+      imageUrl: "/placeholder.svg?height=700&width=1000&text=SQL+Data+Science+Certificate",
       verifyUrl: "https://coursera.org/verify/APTLV2JCZ3Q4",
       category: "Data Science & AI",
       issuer: "IBM",
@@ -98,7 +98,7 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "nosql-databases",
       title: "Introduction to NoSQL Databases",
-      imageUrl: "/placeholder.svg?height=700&width=1000",
+      imageUrl: "/placeholder.svg?height=700&width=1000&text=NoSQL+Databases+Certificate",
       verifyUrl: "https://coursera.org/verify/ZCTVE27UR2A",
       category: "Data Science & AI",
       issuer: "IBM",
@@ -109,7 +109,7 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "tic-tac-toe",
       title: "Create a Tic-Tac-Toe game in Python",
-      imageUrl: "/placeholder.svg?height=700&width=1000",
+      imageUrl: "/placeholder.svg?height=700&width=1000&text=Tic-Tac-Toe+Certificate",
       verifyUrl: "https://coursera.org/verify/ZAXNJSC2LZHQ",
       category: "Programming Projects",
       issuer: "Coursera Project Network",
@@ -118,7 +118,7 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "interactive-fiction",
       title: "Create an interactive fiction adventure game with Python",
-      imageUrl: "/placeholder.svg?height=700&width=1000",
+      imageUrl: "/placeholder.svg?height=700&width=1000&text=Interactive+Fiction+Certificate",
       verifyUrl: "https://coursera.org/verify/E23KGAV7G2ZE",
       category: "Programming Projects",
       issuer: "Coursera Project Network",
@@ -129,7 +129,7 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "human-centered-design",
       title: "Human-Centered Design for Inclusive Innovation",
-      imageUrl: "/placeholder.svg?height=700&width=1000",
+      imageUrl: "/placeholder.svg?height=700&width=1000&text=Human-Centered+Design+Certificate",
       verifyUrl: "https://coursera.org/verify/RT7WA8ZJQYPB",
       category: "Design & Innovation",
       issuer: "University of Toronto",
