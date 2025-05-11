@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 import Image from "next/image"
-import { X, Minimize2, Maximize2 } from "lucide-react"
+import { X, Minimize2, Maximize2, AlertCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface CertificateModalProps {
@@ -14,6 +14,7 @@ interface CertificateModalProps {
 
 export function CertificateModal({ isOpen, onClose, imageUrl, title, verifyUrl }: CertificateModalProps) {
   const [isMinimized, setIsMinimized] = useState(false)
+  const [imageError, setImageError] = useState(false)
 
   if (!isOpen) return null
 
@@ -58,15 +59,26 @@ export function CertificateModal({ isOpen, onClose, imageUrl, title, verifyUrl }
             {/* Scrollable content area */}
             <div className="overflow-y-auto max-h-[calc(90vh-130px)]">
               <div className="relative p-2 bg-white">
-                <div className="relative w-full" style={{ height: "auto", maxHeight: "70vh" }}>
-                  <Image
-                    src={imageUrl || "/placeholder.svg"}
-                    alt={`${title} Certificate`}
-                    width={1000}
-                    height={700}
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
+                {imageError ? (
+                  <div className="flex flex-col items-center justify-center p-8 text-gray-500">
+                    <AlertCircle size={48} className="mb-4" />
+                    <p className="text-center">
+                      Certificate image could not be loaded. Please try verifying the certificate using the link below.
+                    </p>
+                  </div>
+                ) : (
+                  <div className="relative w-full" style={{ height: "auto", maxHeight: "70vh" }}>
+                    <Image
+                      src={imageUrl || "/placeholder.svg?height=700&width=1000"}
+                      alt={`${title} Certificate`}
+                      width={1000}
+                      height={700}
+                      className="w-full h-auto object-contain"
+                      onError={() => setImageError(true)}
+                      unoptimized
+                    />
+                  </div>
+                )}
               </div>
             </div>
 
