@@ -24,16 +24,16 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "algorithmic-toolbox",
       title: "Algorithmic Toolbox",
-      imageUrl: "/certificates/algorithmic-toolbox.jpg",
+      imageUrl: "/certificates/algorithmic-toolbox-actual.jpeg",
       verifyUrl: "https://coursera.org/verify/PQLV3PDUTBVG",
       category: "Core Courses",
       issuer: "UC San Diego",
-      date: "2023",
+      date: "Mar 30, 2023",
     },
     {
       id: "java-oop",
       title: "Object Oriented Programming in Java",
-      imageUrl: "/certificates/java-oop.jpg",
+      imageUrl: "/certificates/java-oop-actual.jpeg",
       verifyUrl: "https://coursera.org/verify/93DYJX2EMUN7",
       category: "Core Courses",
       issuer: "UC San Diego",
@@ -42,16 +42,16 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "data-structures",
       title: "Data Structures",
-      imageUrl: "/certificates/data-structures.jpg",
+      imageUrl: "/certificates/data-structures-actual.jpeg",
       verifyUrl: "https://coursera.org/verify/JN6EF3U3A2KE",
       category: "Core Courses",
       issuer: "UC San Diego",
-      date: "2023",
+      date: "Mar 30, 2023",
     },
     {
       id: "java-arrays",
       title: "Java Programming: Arrays, Lists, and Structured Data",
-      imageUrl: "/placeholder.svg?height=700&width=1000&text=Java+Programming+Certificate",
+      imageUrl: "/certificates/java-arrays-actual.jpeg",
       verifyUrl: "https://coursera.org/verify/UK6SB63NUZ7K",
       category: "Core Courses",
       issuer: "Duke University",
@@ -60,7 +60,7 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "python-basics",
       title: "Python Basics",
-      imageUrl: "/placeholder.svg?height=700&width=1000&text=Python+Basics+Certificate",
+      imageUrl: "/certificates/python-basics-actual.jpeg",
       verifyUrl: "https://coursera.org/verify/8KA7M34W363N",
       category: "Core Courses",
       issuer: "University of Michigan",
@@ -71,7 +71,7 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "python-data-science",
       title: "Python for Data Science, AI & Development",
-      imageUrl: "/certificates/python-data-science.jpg",
+      imageUrl: "/certificates/python-data-science-actual.jpeg",
       verifyUrl: "https://coursera.org/verify/XX8RV657XLQC",
       category: "Data Science & AI",
       issuer: "IBM",
@@ -80,7 +80,7 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "intro-ai",
       title: "Introduction to Artificial Intelligence (AI)",
-      imageUrl: "/placeholder.svg?height=700&width=1000&text=Intro+to+AI+Certificate",
+      imageUrl: "/certificates/intro-ai-actual.jpeg",
       verifyUrl: "https://coursera.org/verify/WRNHR3M8TF56",
       category: "Data Science & AI",
       issuer: "IBM",
@@ -89,7 +89,7 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "sql-data-science",
       title: "Databases and SQL for Data Science with Python",
-      imageUrl: "/placeholder.svg?height=700&width=1000&text=SQL+Data+Science+Certificate",
+      imageUrl: "/certificates/sql-data-science-actual.jpeg",
       verifyUrl: "https://coursera.org/verify/APTLV2JCZ3Q4",
       category: "Data Science & AI",
       issuer: "IBM",
@@ -98,7 +98,7 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "nosql-databases",
       title: "Introduction to NoSQL Databases",
-      imageUrl: "/placeholder.svg?height=700&width=1000&text=NoSQL+Databases+Certificate",
+      imageUrl: "/certificates/nosql-databases-actual.jpeg",
       verifyUrl: "https://coursera.org/verify/ZCTVE27UR2A",
       category: "Data Science & AI",
       issuer: "IBM",
@@ -109,7 +109,7 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "tic-tac-toe",
       title: "Create a Tic-Tac-Toe game in Python",
-      imageUrl: "/placeholder.svg?height=700&width=1000&text=Tic-Tac-Toe+Certificate",
+      imageUrl: "/certificates/tic-tac-toe-actual.jpeg",
       verifyUrl: "https://coursera.org/verify/ZAXNJSC2LZHQ",
       category: "Programming Projects",
       issuer: "Coursera Project Network",
@@ -118,7 +118,7 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "interactive-fiction",
       title: "Create an interactive fiction adventure game with Python",
-      imageUrl: "/placeholder.svg?height=700&width=1000&text=Interactive+Fiction+Certificate",
+      imageUrl: "/certificates/interactive-fiction-actual.jpeg",
       verifyUrl: "https://coursera.org/verify/E23KGAV7G2ZE",
       category: "Programming Projects",
       issuer: "Coursera Project Network",
@@ -129,7 +129,7 @@ export function CertificateViewer({ children }: { children: React.ReactNode }) {
     {
       id: "human-centered-design",
       title: "Human-Centered Design for Inclusive Innovation",
-      imageUrl: "/placeholder.svg?height=700&width=1000&text=Human-Centered+Design+Certificate",
+      imageUrl: "/certificates/human-centered-design-actual.jpeg",
       verifyUrl: "https://coursera.org/verify/RT7WA8ZJQYPB",
       category: "Design & Innovation",
       issuer: "University of Toronto",

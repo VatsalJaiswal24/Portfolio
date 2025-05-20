@@ -22,7 +22,8 @@ export function CertificateModal({ isOpen, onClose, imageUrl, title, verifyUrl }
     setIsMinimized(!isMinimized)
   }
 
-  const isPlaceholder = imageUrl.includes("placeholder.svg")
+  // Only consider it a placeholder if it's directly using the placeholder.svg URL
+  const isPlaceholder = imageUrl.includes("placeholder.svg") && !imageUrl.includes("/certificates/")
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">

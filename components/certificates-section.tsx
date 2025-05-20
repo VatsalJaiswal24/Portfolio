@@ -53,31 +53,31 @@ export function CertificatesSection() {
         id: "algorithmic-toolbox",
         title: "Algorithmic Toolbox",
         issuer: "UC San Diego",
-        date: "2023",
+        date: "Mar 30, 2023",
       },
       {
         id: "data-structures",
         title: "Data Structures",
         issuer: "UC San Diego",
-        date: "2023",
+        date: "Mar 30, 2023",
       },
       {
         id: "java-oop",
         title: "Object Oriented Programming in Java",
         issuer: "UC San Diego",
-        date: "Nov 2022",
+        date: "Nov 13, 2022",
       },
       {
         id: "java-arrays",
         title: "Java Programming: Arrays, Lists, and Structured Data",
         issuer: "Duke University",
-        date: "Nov 2022",
+        date: "Nov 13, 2022",
       },
       {
         id: "python-basics",
         title: "Python Basics",
         issuer: "University of Michigan",
-        date: "Feb 2022",
+        date: "Feb 2, 2022",
       },
     ],
     dataScienceAI: [
@@ -85,25 +85,25 @@ export function CertificatesSection() {
         id: "python-data-science",
         title: "Python for Data Science, AI & Development",
         issuer: "IBM",
-        date: "May 2022",
+        date: "May 2, 2022",
       },
       {
         id: "intro-ai",
         title: "Introduction to Artificial Intelligence (AI)",
         issuer: "IBM",
-        date: "Feb 2022",
+        date: "Feb 3, 2022",
       },
       {
         id: "sql-data-science",
         title: "Databases and SQL for Data Science with Python",
         issuer: "IBM",
-        date: "Nov 2023",
+        date: "Nov 29, 2023",
       },
       {
         id: "nosql-databases",
         title: "Introduction to NoSQL Databases",
         issuer: "IBM",
-        date: "Nov 2023",
+        date: "Nov 27, 2023",
       },
     ],
     projects: [
@@ -111,13 +111,13 @@ export function CertificatesSection() {
         id: "tic-tac-toe",
         title: "Create a Tic-Tac-Toe game in Python",
         issuer: "Coursera Project Network",
-        date: "May 2023",
+        date: "May 5, 2023",
       },
       {
         id: "interactive-fiction",
         title: "Create an interactive fiction adventure game with Python",
         issuer: "Coursera Project Network",
-        date: "May 2023",
+        date: "May 5, 2023",
       },
     ],
     design: [
@@ -125,17 +125,33 @@ export function CertificatesSection() {
         id: "human-centered-design",
         title: "Human-Centered Design for Inclusive Innovation",
         issuer: "University of Toronto",
-        date: "Apr 2022",
+        date: "Apr 18, 2022",
       },
     ],
   }
 
   // Helper function to convert date strings to sortable values
   const getDateSortValue = (dateStr: string) => {
-    if (dateStr.includes("Nov")) return 2023.11
-    if (dateStr.includes("May")) return 2023.05
-    if (dateStr.includes("Apr")) return 2022.04
-    if (dateStr.includes("Feb")) return 2022.02
+    const months = {
+      Jan: 1,
+      Feb: 2,
+      Mar: 3,
+      Apr: 4,
+      May: 5,
+      Jun: 6,
+      Jul: 7,
+      Aug: 8,
+      Sep: 9,
+      Oct: 10,
+      Nov: 11,
+      Dec: 12,
+    }
+
+    if (dateStr.includes(" ")) {
+      const [month, day, year] = dateStr.split(" ")
+      return Number.parseFloat(`${year}.${months[month as keyof typeof months]}.${day.replace(",", "")}`)
+    }
+
     return Number.parseInt(dateStr)
   }
 
